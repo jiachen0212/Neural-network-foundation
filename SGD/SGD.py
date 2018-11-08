@@ -7,7 +7,7 @@ import xlrd
 def getData(dataset):
     m, n = np.shape(dataset)
     traindata = np.ones((m, n))
-    traindata[:, :-1] = dataset[:, :-1]    # so the last col of traindata is ones
+    traindata[:, :-1] = dataset[:, :-1]    # so the last col of traindata is ones. x0=1, for the bias
     trainlabel = dataset[:, -1]
     return traindata, trainlabel
 
